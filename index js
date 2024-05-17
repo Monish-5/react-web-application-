@@ -1,0 +1,36 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.module.css";
+import Profile from "./profile/Profile";
+import About from "./About/About";
+
+import Contact from "./Contact/Contact";
+import Navbar from "./navbar/Navbar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+function Index() {
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Navbar/>}/>
+          <Route path="/" element={<Navbar/>}/>
+          <Route path="/profile/:id" element={<Profile/>}/>
+          <Route path="/profile" element={<h1>Add user id in URL**</h1>}/>
+          <Route path="/about" element={<About/>}/>
+         
+          <Route path="/contact" element={<Contact/>}/>
+          <Route path="" element={<h1>*NoPage</h1>} />
+          
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <Index />
+  </React.StrictMode>
+);
