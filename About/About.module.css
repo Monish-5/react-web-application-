@@ -1,0 +1,14 @@
+.p{
+  text-align: center;
+
+}
+li{
+    display: inline-flex;
+    padding: 0 10px;
+    height: 10px;
+    line-height: 30px;
+    text-align: center;
+}
+ul{
+  text-align: center;
+}
